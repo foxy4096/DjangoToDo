@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Delete ToDo
+{% endblock title %}
+
+{% block content %}
+<form action="." method="POST" class="form">
+    <div class="form-group">
+        {% csrf_token %}
+        <h4 class="display-4">Are you sure you want to delete the todo?</h4>
+        <br>
+        <div class="card">
+            <div class="card-item">
+                <div class="container">
+                    <h3 class="display-3">Title: {{ todo.title }}</h3>
+                    <p>Description: {{ todo.description }}</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-outline-danger">Delete</button>
+    </div>
+</form>
+{% endblock content %}
