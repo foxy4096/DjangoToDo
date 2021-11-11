@@ -11,11 +11,6 @@ class ToDoListView(ListView):
 
 
 
-class ToDoDetailView(DetailView):
-    model = ToDo
-
-
-
 class ToDoCreateView(CreateView):
     model = ToDo
     success_url = '/'

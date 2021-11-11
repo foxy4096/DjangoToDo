@@ -16,7 +16,7 @@ Home
         <br>
         <a href="{% url 'edit' todo.pk %}" class="btn btn-outline-primary">Edit</a>
         <a href="{% url 'delete' todo.pk %}" class="btn btn-outline-danger">Delete</a>
-        <p>{{ todo.description | truncatechars:50 }}</p>
+        <p>{{ todo.description }}</p>
     </li>
     {% endfor %}
 </ol>
